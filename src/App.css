@@ -14,14 +14,14 @@
 }
 
 /* Tooltip container */
-.tooltip {
+.Tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.Tooltip .Tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -36,7 +36,7 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover.tooltiptext {
+.Tooltip:hover .Tooltiptext {
   visibility: visible;
 }  
 

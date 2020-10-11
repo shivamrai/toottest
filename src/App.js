@@ -32,7 +32,7 @@ import Editor from './components/Editor';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         {/* <MarkerPopup>
           <div id = "editor">
               Hover over the highlighted words to see some popups!
@@ -54,7 +54,7 @@ function App() {
           </div>
         </MarkerPopup> */}
         <Editor />
-      </header>
+      {/* </header> */}
     </div>
   );
 }

@@ -3,15 +3,6 @@ import Overlay  from 'react-bootstrap/Overlay';
 import '../App.css';
 
 // Dynamic Markers ------------------------------------
-let highlight1 = {};
-highlight1.update = customUpdateWithOverlay.call(
-highlight1,
-'marker1',
-word1.range,
-'bottom',
-'Lorem Ipsum Popover',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis velit tellus.',
-false);
 
 
 const Line = (props) =>{
@@ -22,9 +13,9 @@ const Line = (props) =>{
     console.log(words);
     return (
         <div>
-            <span className = "tooltip" ref={target}  onClick={() => setShow(!show)}
+            <span className = "Tooltip"
        style={{color: "maroon", backgroundColor:"aqua"}}>{words[0]}
-              <span className="tooltiptext">
+              <span className="Tooltiptext">
                 Hello 
               </span> 
             </span>
