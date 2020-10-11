@@ -2,6 +2,17 @@ import React, {useState,useRef} from 'react';
 import Overlay  from 'react-bootstrap/Overlay'; 
 import '../App.css';
 
+// Dynamic Markers ------------------------------------
+let highlight1 = {};
+highlight1.update = customUpdateWithOverlay.call(
+highlight1,
+'marker1',
+word1.range,
+'bottom',
+'Lorem Ipsum Popover',
+'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis velit tellus.',
+false);
+
 
 const Line = (props) =>{
 

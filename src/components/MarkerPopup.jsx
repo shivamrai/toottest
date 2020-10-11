@@ -59,9 +59,7 @@ class MarkerPopup extends React.Component {
             rootClose: true,
             onHide: () => this.setState({ show: false }),
             show: this.state.show },
-    
+
         this.props.children));
-            
-    
     }}
 export default MarkerPopup;
