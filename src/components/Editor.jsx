@@ -23,7 +23,7 @@ let rows = [];
 const line = l => {
     console.log(data);
     for (let [key, value] of Object.entries(data)){
-        rows.push(<Line keyText={key} text = {value}/>);
+        rows.push(<Line keyText={key} hoverText = {value} text = {value}/>);
     }
     return (
     <div>

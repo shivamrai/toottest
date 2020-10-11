@@ -16,7 +16,7 @@ const Line = (props) =>{
             <span className = "Tooltip"
        style={{color: "maroon", backgroundColor:"aqua"}}>{props.keyText}
               <span className="Tooltiptext">
-                Hello 
+                {props.hoverText}
               </span> 
             </span>
             {props.text}
