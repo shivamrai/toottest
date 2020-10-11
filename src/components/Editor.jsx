@@ -2,14 +2,14 @@ import React from 'react';
 import Line from './Lines';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
-
-let data = `across against answer awhile
-between board bottom breakfast broken build building built
-captain carried caught charge chicken circus cities clothes company
-couldn't country discover doctor doesn't dollar during
-eighth else enjoy enough everybody example except excuse
-`;
-let lines = data.split(/\n/);
+import data from './definitions';
+// let data = `across against answer awhile
+// between board bottom breakfast broken build building built
+// captain carried caught charge chicken circus cities clothes company
+// couldn't country discover doctor doesn't dollar during
+// eighth else enjoy enough everybody example except excuse
+// `;
+// let lines = data.split(/\n/);
 
 // var rows = [];
 // for (var i = 0; i < numrows; i++) {
@@ -21,8 +21,9 @@ let lines = data.split(/\n/);
 
 let rows = [];
 const line = l => {
-    for (let i=0; i<lines.length; i++){
-        rows.push(<Line data = {lines[i]}/>);
+    console.log(data);
+    for (let [key, value] of Object.entries(data)){
+        rows.push(<Line keyText={key} text = {value}/>);
     }
     return (
     <div>
@@ -35,7 +36,7 @@ const Editor = (prop) => {
 
     return (
 
-            line(lines)
+            line(data)
 
     )
 }
