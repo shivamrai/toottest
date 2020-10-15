@@ -5,7 +5,7 @@ import '../App.css';
 // Dynamic Markers ------------------------------------
 
 
-const Line = (props) =>{
+const Words = (props) =>{
 
     // let words = props.data.split(' ');
     // const [show,setShow] = useState(false);
@@ -13,16 +13,10 @@ const Line = (props) =>{
     // console.log(words);
     return (
         // <div style={{textAlign: "left"}}>
-            <span className = "Tooltip"
-                style={{color: "maroon", backgroundColor:"aqua"}}>{props.keyText}
-              <span className="Tooltiptext">
-                {props.hoverText}
-              </span> 
-            </span>
-      // </div>
+            <span>{props.text}</span>
+            
+    //   </div>
     )
 }
-            {/* {props.text} */}
 
-
-export default Line;
+export default Words;

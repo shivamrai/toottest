@@ -3,42 +3,74 @@ import Line from './Lines';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import data from './definitions';
-// let data = `across against answer awhile
-// between board bottom breakfast broken build building built
-// captain carried caught charge chicken circus cities clothes company
-// couldn't country discover doctor doesn't dollar during
-// eighth else enjoy enough everybody example except excuse
-// `;
-// let lines = data.split(/\n/);
+import Words from './Words';
+import Splitter from './Splitter';
 
-// var rows = [];
-// for (var i = 0; i < numrows; i++) {
-//     // note: we are adding a key prop here to allow react to uniquely identify each
-//     // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-//     rows.push(<ObjectRow key={i} />);
-// }
-// return <tbody>{rows}</tbody>;
+let rows = [], subRows = [];
 
-let rows = [];
+
 const line = l => {
-    console.log(data);
-    for (let [key, value] of Object.entries(data)){
-        rows.push(<Line keyText={key} hoverText = {value} text = {value}/>);
+    
+    console.log(l);
+    // for (let [key, value] of Object.entries(data)){
+    //     rows.push(<Line keyText={key} hoverText = {value} text = {value}/>);
+    // }
+    for(let i = 0;i<l.length; i++){
+        rows.push(<Splitter line={l} index={i} />);   
+        console.log("i: ",i)     ;
+        // l[i]
     }
-    return (
-    <div>
-       {rows}
-    </div>
-    );
+
+    return rows;
+    
+    // return (
+    // <div>
+    //    {rows}
+    // </div>
+    // );
 }
 
 const Editor = (prop) => {
-
-    return (
-
-            line(data)
-
-    )
+    // const [contents,setContents]=React.useState(`
+    // -keepclasseswithmembers class * {
+    // public static void main(java.lang.String[]);
+    // }
+    // -ignorewarnings
+    // -dontshrink
+    // -dontskipnonpubliclibraryclassmembers
+    // -target 1.8
+    // -allowaccessmodification
+    // -mergeinterfacesaggressively
+    // -keepparameternames     
+    // `);
+    let contents = `
+    -keepclasseswithmembers class * {
+    public static void main(java.lang.String[]);
+    }
+    -ignorewarnings
+    -dontshrink
+    -dontskipnonpubliclibraryclassmembers
+    -target 1.8
+    -allowaccessmodification
+    -mergeinterfacesaggressively
+    -keepparameternames     
+    `
+    console.log(contents);
+    let lines = contents.split('\n');
+    const lengthText = lines.length;
+    let words = [];
+    for (let i =0; i < 12;i++){
+        words.push(lines[i].split(/\s/));
+        console.log(words);
+    }
+    console.log(lines);
+    console.log(words[2]);
+    // return line(words);
+    // return <div>Test</div>;
+    return <div>
+        {line(words)}
+    </div>
+    
 }
 
 export default Editor;

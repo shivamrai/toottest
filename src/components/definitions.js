@@ -10,4 +10,5 @@ export default {
     "-keepclasseswithmembernames": "Prevent matching classes and matching members from being renamed if the corresponding class contains all of the specified members.",
     "-keeppackagenames": "Don’t rename packages which match the filter.",
     "-overloadaggressively": "Use the same name as much as possible, even if it may not be allowed by the source language.",
+    "-dontskipnonpubliclibraryclassmembers":" Do not skip on non public library class members"
 }
