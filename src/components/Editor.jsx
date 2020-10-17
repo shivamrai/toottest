@@ -16,7 +16,7 @@ const line = l => {
     //     rows.push(<Line keyText={key} hoverText = {value} text = {value}/>);
     // }
     for(let i = 0;i<l.length; i++){
-        rows.push(<Splitter line={l} index={i} />);   
+        rows.push(<Splitter line={l[i]} index={i} />);   
         console.log("i: ",i)     ;
         // l[i]
     }
@@ -59,12 +59,12 @@ const Editor = (prop) => {
     let lines = contents.split('\n');
     const lengthText = lines.length;
     let words = [];
-    for (let i =0; i < 12;i++){
+    for (let i =0; i < lengthText;i++){
         words.push(lines[i].split(/\s/));
         console.log(words);
     }
     console.log(lines);
-    console.log(words[2]);
+    console.log(words);
     // return line(words);
     // return <div>Test</div>;
     return <div>
